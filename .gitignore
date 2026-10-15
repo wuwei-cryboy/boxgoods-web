@@ -1,0 +1,16 @@
+node_modules
+.next
+out
+next-start.log
+next-err.log
+build-out.log
+.env*
+*.log
+.DS_Store
+@
+fix_parfums.py
+update-catalog.js
+build-map.js
+map-plan.json
+fix68.js
+
