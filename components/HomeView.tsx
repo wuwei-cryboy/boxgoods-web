@@ -1,6 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import { getCategories, getProductsByCat, getProducts } from "@/lib/catalog";
+const norm = (p?: string) => (p ? (p.startsWith("img/") ? "/" + p : p) : "");
 import { useLang } from "@/lib/lang-context";
 
 export default function HomeView() {
@@ -71,7 +72,7 @@ export default function HomeView() {
         {rec.map(p => (
           <a key={p.id} href={"/product/" + p.id} className="snap-start shrink-0 w-[45%] bg-card border border-[var(--color-line)] rounded-2xl overflow-hidden shadow-sm">
             <div className="aspect-square bg-white flex items-center justify-center p-3">
-              {p.image ? <img src={p.image} alt={p.nameFr} loading="lazy" className="object-contain w-full h-full"/> : <div>📦</div>}
+              {p.image ? <img src={norm(p.image)} alt={p.nameFr} className="object-contain w-full h-full"/> : <div>📦</div>}
             </div>
             <div className="p-3">
               <div className="text-sm font-bold line-clamp-2">{lang === "zh" ? p.nameZh : p.nameFr}</div>
