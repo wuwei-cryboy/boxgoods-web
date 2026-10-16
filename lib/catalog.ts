@@ -3,7 +3,7 @@ import i18nRaw from "./data/i18n.json";
 
 export type Category = { id: string; fr: string; zh: string; icon?: string };
 export type Supplier = { id: string; name: string; address: string; phone?: string; wa?: string; icon?: string };
-export type Variant = { type: "color"|"memory"|"model"; label: string; img?: string; price?: number };
+export type Variant = { type: "color"|"memory"|"model"|"spec"; label: string; img?: string; price?: number };
 export type Product = {
   id: string; cat: string; supplierId: string; image?: string;
   detailImages?: string[]; nameFr: string; nameZh: string;
