@@ -91,7 +91,7 @@
       "id": "p01",
       "cat": "parfums",
       "supplierId": "s2",
-      "image": "img/parfums/01-main.jpg",
+      "image": "img/parfums/01-main.webp",
       "nameFr": "Parfum Emperé 反转巴黎 50 ml",
       "nameZh": "反转巴黎 女士淡香 50ml",
       "priceMin": 8,
@@ -113,20 +113,12 @@
           "8-10 h"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Emperé 1",
-          "price": 8,
-          "img": "img/parfums/01-main.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Emperé 2",
-          "price": 8,
-          "img": "img/parfums/p01-t2.jpg"
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Emperé 1",
+        "price": 8,
+        "img": "img/parfums/01-main.webp"
+      },
       "sellingPoint": "50 ml · ambré boisé · tenue 8-10 h",
       "detailImages": []
     },
@@ -134,7 +126,7 @@
       "id": "p02",
       "cat": "parfums",
       "supplierId": "s2",
-      "image": "img/parfums/02-main.jpg",
+      "image": "img/parfums/02-main.webp",
       "nameFr": "UDCLUB Chant de Fleurs 50 ml",
       "nameZh": "UDCLUB 花漾甜心 香水 50ml（多香型）",
       "priceMin": 10,
@@ -161,91 +153,13 @@
           "type": "color",
           "label": "Gilded Elegant",
           "price": 10,
-          "img": "img/parfums/02-main.jpg"
+          "img": "img/parfums/02-main.webp"
         },
         {
           "type": "color",
           "label": "Cream Muffin",
           "price": 10,
-          "img": "img/parfums/p02-t2.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Phantom Gold",
-          "price": 10,
-          "img": "img/parfums/p02-t3.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Aube Rosée",
-          "price": 10,
-          "img": "img/parfums/p02-t4.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Braise & Aube",
-          "price": 10,
-          "img": "img/parfums/p02-t5.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Été Flou",
-          "price": 10,
-          "img": "img/parfums/p02-t6.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Lumière Tissée",
-          "price": 10,
-          "img": "img/parfums/p02-t7.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Fruity Floral",
-          "price": 10,
-          "img": "img/parfums/p02-t8.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Chuchotement",
-          "price": 10,
-          "img": "img/parfums/p02-t9.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Or Crémeux",
-          "price": 10,
-          "img": "img/parfums/p02-t10.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Rose Poudré",
-          "price": 10,
-          "img": "img/parfums/p02-t11.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Bergamote",
-          "price": 10,
-          "img": "img/parfums/p02-t12.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Vanille Noire",
-          "price": 10,
-          "img": "img/parfums/p02-t13.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Cuir Doré",
-          "price": 10,
-          "img": "img/parfums/p02-t14.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Santal Royal",
-          "price": 10,
-          "img": "img/parfums/p02-t15.jpg"
+          "img": "img/parfums/p02-t2.webp"
         }
       ],
       "sellingPoint": "50 ml · multi-parfums · coffret",
@@ -255,7 +169,7 @@
       "id": "p03",
       "cat": "parfums",
       "supplierId": "s2",
-      "image": "img/parfums/03-main.jpg",
+      "image": "img/parfums/03-main.webp",
       "nameFr": "Coffret Duo Rose (F228 + F183A)",
       "nameZh": "自由之水 + F183A 双瓶礼盒",
       "priceMin": 8,
@@ -277,12 +191,7 @@
           "Rose"
         ]
       ],
-      "variants": {
-        "type": "color",
-        "label": "Rose",
-        "price": 8,
-        "img": "img/parfums/p03-t1.jpg"
-      },
+      "variants": null,
       "sellingPoint": "Coffret 2×50 ml · rose",
       "detailImages": []
     },
@@ -290,7 +199,7 @@
       "id": "p04",
       "cat": "parfums",
       "supplierId": "s2",
-      "image": "img/parfums/04-main.jpg",
+      "image": "img/parfums/04-main.webp",
       "nameFr": "SADOER Santal & Fleur Libre 50-55 ml",
       "nameZh": "SADOER 檀香 + 自由之花 双瓶礼盒",
       "priceMin": 8,
@@ -312,20 +221,12 @@
           "Or"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Or",
-          "price": 8,
-          "img": "img/parfums/04-main.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Champagne",
-          "price": 10,
-          "img": "img/parfums/p04-t2.jpg"
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Or",
+        "price": 8,
+        "img": "img/parfums/04-main.webp"
+      },
       "sellingPoint": "Coffret 2×50-55 ml · or premium",
       "detailImages": []
     },
@@ -333,7 +234,7 @@
       "id": "p05",
       "cat": "parfums",
       "supplierId": "s2",
-      "image": "img/parfums/05-main.jpg",
+      "image": "img/parfums/05-main.webp",
       "nameFr": "MEJISOO Duo Poudré 50 ml",
       "nameZh": "MEJISOO 粉雾香双瓶礼盒 50ml",
       "priceMin": 7,
@@ -355,32 +256,12 @@
           "Multi-parfums"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Poudré 1",
-          "price": 7,
-          "img": "img/parfums/05-main.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Poudré 2",
-          "price": 7,
-          "img": "img/parfums/p05-t2.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Poudré 3",
-          "price": 20,
-          "img": "img/parfums/p05-t3.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Poudré 4",
-          "price": 20,
-          "img": "img/parfums/p05-t4.jpg"
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Poudré 1",
+        "price": 7,
+        "img": "img/parfums/05-main.webp"
+      },
       "sellingPoint": "50 ml · floral · 3 parfums",
       "detailImages": []
     },
@@ -388,7 +269,7 @@
       "id": "p06",
       "cat": "parfums",
       "supplierId": "s2",
-      "image": "img/parfums/06-main.jpg",
+      "image": "img/parfums/06-main.webp",
       "nameFr": "Black Opium Duo 30-50 ml",
       "nameZh": "黑鸦片双瓶礼盒 30-50ml",
       "priceMin": 7,
@@ -410,26 +291,12 @@
           "Rose & Prune"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Rose",
-          "price": 7,
-          "img": "img/parfums/06-main.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Prune",
-          "price": 7,
-          "img": "img/parfums/p06-t2.jpg"
-        },
-        {
-          "type": "color",
-          "label": "Lila",
-          "price": 7,
-          "img": "img/parfums/p06-t3.jpg"
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Rose",
+        "price": 7,
+        "img": "img/parfums/06-main.webp"
+      },
       "sellingPoint": "30-50 ml · rose & prune",
       "detailImages": []
     },
@@ -437,7 +304,7 @@
       "id": "rm056",
       "cat": "montres",
       "supplierId": "s3",
-      "image": "img/montres/01-main.jpg",
+      "image": "img/montres/01-main.webp",
       "nameFr": "RM056 Montre carrée squelette (10 coloris)",
       "nameZh": "RM056 方盘镂空腕表（10 色可选）",
       "priceMin": 12,
@@ -463,32 +330,12 @@
           "5 ATM"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/montres/01-main.jpg",
-          "price": 17
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/montres/01-t2.jpg",
-          "price": 31
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/montres/01-t3.jpg",
-          "price": 31
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/montres/01-t4.jpg",
-          "price": 31
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/montres/01-main.webp",
+        "price": 17
+      },
       "sellingPoint": "Carré squelette · 10 coloris · quartz",
       "detailImages": [
         "img/montres/01-d01.jpg",
@@ -509,7 +356,7 @@
       "id": "cedi",
       "cat": "montres",
       "supplierId": "s3",
-      "image": "img/montres/02-main.jpg",
+      "image": "img/montres/02-main.webp",
       "nameFr": "CEDI Montre carrée léopard & pierres (6 coloris)",
       "nameZh": "CEDI 豹纹/满钻方盘腕表（6 色）",
       "priceMin": 15,
@@ -535,44 +382,12 @@
           "3 ATM"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/montres/02-main.jpg",
-          "price": 21
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/montres/02-t2.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/montres/02-t3.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/montres/02-t4.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 4",
-          "img": "img/montres/02-t5.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 5",
-          "img": "img/montres/02-t6.jpg",
-          "price": 40
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/montres/02-main.webp",
+        "price": 21
+      },
       "sellingPoint": "Carré léopard & pierres · 6 coloris",
       "detailImages": [
         "img/montres/02-d01.jpg",
@@ -589,7 +404,7 @@
       "id": "gedi",
       "cat": "montres",
       "supplierId": "s3",
-      "image": "img/montres/03-main.jpg",
+      "image": "img/montres/03-main.webp",
       "nameFr": "GEDi Montre carrée dorée (3 coloris)",
       "nameZh": "GEDi 金色满钻方盘腕表（3 色）",
       "priceMin": 18,
@@ -615,38 +430,12 @@
           "3 ATM"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/montres/03-main.jpg",
-          "price": 26
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/montres/03-t2.jpg",
-          "price": 46
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/montres/03-t3.jpg",
-          "price": 46
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/montres/03-t4.jpg",
-          "price": 46
-        },
-        {
-          "type": "color",
-          "label": "Set 4",
-          "img": "img/montres/03-t5.jpg",
-          "price": 46
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/montres/03-main.webp",
+        "price": 26
+      },
       "sellingPoint": "Carré doré · pierres · 3 coloris",
       "detailImages": [
         "img/montres/03-d01.jpg",
@@ -664,7 +453,7 @@
       "id": "banmyyer",
       "cat": "montres",
       "supplierId": "s3",
-      "image": "img/montres/04-main.jpg",
+      "image": "img/montres/04-main.webp",
       "nameFr": "Banmyyer Montre sport féminine 31,5 g",
       "nameZh": "Banmyyer 女士运动腕表 31.5g",
       "priceMin": 5,
@@ -690,26 +479,12 @@
           "3 ATM"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/montres/04-main.jpg",
-          "price": 7
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/montres/04-t2.jpg",
-          "price": 7
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/montres/04-t3.jpg",
-          "price": 7
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/montres/04-main.webp",
+        "price": 7
+      },
       "sellingPoint": "Sport féminin · quartz · 31,5 g",
       "detailImages": [
         "img/montres/04-d01.jpg",
@@ -729,7 +504,7 @@
       "id": "olevs",
       "cat": "montres",
       "supplierId": "s3",
-      "image": "img/montres/05-main.jpg",
+      "image": "img/montres/05-main.webp",
       "nameFr": "OLEVS Montre acier homme (multi-color)",
       "nameZh": "OLEVS 男士钢带石英表（多色）",
       "priceMin": 18,
@@ -755,14 +530,7 @@
           "11 ATM"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/montres/05-t1.jpg",
-          "price": 40
-        }
-      ],
+      "variants": null,
       "sellingPoint": "Acier homme · quartz · 11 ATM",
       "detailImages": [
         "img/montres/05-d01.jpg",
@@ -781,7 +549,7 @@
       "id": "kimsdun",
       "cat": "montres",
       "supplierId": "s3",
-      "image": "img/montres/06-main.jpg",
+      "image": "img/montres/06-main.webp",
       "nameFr": "KIMSDUN RM67-02 Montre acier (6 coloris)",
       "nameZh": "KIMSDUN RM67-02 钢带腕表（6 色）",
       "priceMin": 10,
@@ -807,44 +575,12 @@
           "5 ATM"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/montres/06-main.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/montres/06-t2.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/montres/06-t3.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/montres/06-t4.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 4",
-          "img": "img/montres/06-t5.jpg",
-          "price": 40
-        },
-        {
-          "type": "color",
-          "label": "Set 5",
-          "img": "img/montres/06-t6.jpg",
-          "price": 40
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/montres/06-main.webp",
+        "price": 40
+      },
       "sellingPoint": "RM67-02 · mécanique · 6 coloris",
       "detailImages": [
         "img/montres/06-d01.jpg",
@@ -874,7 +610,7 @@
       "id": "s26",
       "cat": "telephones",
       "supplierId": "s1",
-      "image": "img/telephones/01-main.jpg",
+      "image": "img/telephones/01-main.webp",
       "nameFr": "S26 Ultra 7,3\" 16 Go/1 To (3 coloris)",
       "nameZh": "S26 Ultra 7.3寸 16G/1T（3 色）",
       "priceMin": 429,
@@ -953,7 +689,7 @@
       "id": "i17pm",
       "cat": "telephones",
       "supplierId": "s1",
-      "image": "img/telephones/02-main.jpg",
+      "image": "img/telephones/02-main.webp",
       "nameFr": "i17 Pro Max 6,9\" (multi-color)",
       "nameZh": "i17 Pro Max 6.9寸（橙/蓝/黑多色）",
       "priceMin": 284,
@@ -1034,7 +770,7 @@
       "id": "samsung-six",
       "cat": "telephones",
       "supplierId": "s1",
-      "image": "img/telephones/03-main.jpg",
+      "image": "img/telephones/03-main.webp",
       "nameFr": "SAMSUNG 6-pièces (S21–S25)",
       "nameZh": "三星六件套（S21–S25 通用）",
       "priceMin": 543,
@@ -1113,7 +849,7 @@
       "id": "m80pro",
       "cat": "telephones",
       "supplierId": "s1",
-      "image": "img/telephones/04-main.jpg",
+      "image": "img/telephones/04-main.webp",
       "nameFr": "M80 Pro 5G 16/512 (1 coloris)",
       "nameZh": "M80 Pro 5G 16/512（1 色）",
       "priceMin": 484,
@@ -1194,7 +930,7 @@
       "id": "aslarry",
       "cat": "telephones",
       "supplierId": "s1",
-      "image": "img/telephones/05-main.jpg",
+      "image": "img/telephones/05-main.webp",
       "nameFr": "ASLarry S26 Ultra (multi-couleur)",
       "nameZh": "ASLarry S26 Ultra（多色）",
       "priceMin": 427,
@@ -1257,7 +993,7 @@
       "id": "obbay",
       "cat": "telephones",
       "supplierId": "s1",
-      "image": "img/telephones/06-main.jpg",
+      "image": "img/telephones/06-main.webp",
       "nameFr": "OBXIN 17 ProMax 7,2\" 24 Go/2 To",
       "nameZh": "OBXIN 17 ProMax 7.2寸 24G/2T",
       "priceMin": 427,
@@ -1337,7 +1073,7 @@
       "id": "oixi",
       "cat": "telephones",
       "supplierId": "s1",
-      "image": "img/telephones/01-main.jpg",
+      "image": "img/telephones/01-main.webp",
       "nameFr": "OIXI 17 / 17 Pro / 17 ProMax",
       "nameZh": "OIXI i17 / i17 Pro / i17 ProMax",
       "priceMin": 543,
@@ -1382,7 +1118,7 @@
       "id": "lunettes-femme",
       "cat": "lunettes",
       "supplierId": "s2",
-      "image": "img/lunettes/01-main.jpg",
+      "image": "img/lunettes/01-main.webp",
       "nameFr": "Lunettes carrées femme (12 coloris)",
       "nameZh": "女士方框太阳镜（12 色可选）",
       "priceMin": 4,
@@ -1404,44 +1140,12 @@
           "≈ 25 g"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/lunettes/01-main.jpg",
-          "price": 6
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/lunettes/01-t2.jpg",
-          "price": 11
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/lunettes/01-t3.jpg",
-          "price": 11
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/lunettes/01-t4.jpg",
-          "price": 11
-        },
-        {
-          "type": "color",
-          "label": "Set 4",
-          "img": "img/lunettes/01-t5.jpg",
-          "price": 11
-        },
-        {
-          "type": "color",
-          "label": "Set 5",
-          "img": "img/lunettes/01-t6.jpg",
-          "price": 11
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/lunettes/01-main.webp",
+        "price": 6
+      },
       "sellingPoint": "Carrées · UV400 · 12 coloris",
       "price": 6,
       "detailImages": [
@@ -1462,7 +1166,7 @@
       "id": "lunettes-sport",
       "cat": "lunettes",
       "supplierId": "s2",
-      "image": "img/lunettes/02-main.jpg",
+      "image": "img/lunettes/02-main.webp",
       "nameFr": "Lunettes sport polarisées",
       "nameZh": "运动偏光太阳镜",
       "priceMin": 5,
@@ -1480,14 +1184,7 @@
           "≈ 20 g"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/lunettes/02-t1.jpg",
-          "price": 7
-        }
-      ],
+      "variants": null,
       "sellingPoint": "Sport polarisées · 20 g",
       "price": 7,
       "detailImages": [
@@ -1504,7 +1201,7 @@
       "id": "kit-charg",
       "cat": "accessoires",
       "supplierId": "s1",
-      "image": "img/accessoires/01-main.jpg",
+      "image": "img/accessoires/01-main.webp",
       "nameFr": "Kits accessoires Apple (5/6 pièces, blanc)",
       "nameZh": "35W 充电全家桶（六件套）",
       "priceMin": 12,
@@ -1754,7 +1451,7 @@
       "id": "samsung-six-kit",
       "cat": "accessoires",
       "supplierId": "s1",
-      "image": "img/accessoires/01-main.jpg",
+      "image": "img/accessoires/01-main.webp",
       "nameFr": "Kits SAMSUNG 6 pièces 25 W (S21–S25)",
       "nameZh": "三星六件套 25W（S21–S25 通用）",
       "priceMin": 8,
@@ -1792,7 +1489,7 @@
         {
           "type": "spec",
           "label": "六件套白盒",
-          "img": "img/accessoires/accessoires-5.jpg",
+          "img": "img/accessoires/accessoires-5.webp",
           "price": 22
         },
         {
@@ -1893,7 +1590,7 @@
       "id": "x200",
       "cat": "telephones",
       "supplierId": "s1",
-      "image": "img/telephones/02-main.jpg",
+      "image": "img/telephones/02-main.webp",
       "nameFr": "X200 Pro 1TB MTK6789",
       "nameZh": "X200 Pro 1TB 游戏手机",
       "priceMin": 713,
@@ -1959,7 +1656,7 @@
       "boxSpec": "Carton 12 pces",
       "currency": "USD",
       "price": 17,
-      "image": "img/montres/07-main.jpg",
+      "image": "img/montres/07-main.webp",
       "specs": [
         [
           "Screen",
@@ -1978,26 +1675,12 @@
           "IP67"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/montres/07-main.jpg",
-          "price": 17
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/montres/07-t2.jpg",
-          "price": 31
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/montres/07-t3.jpg",
-          "price": 31
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/montres/07-main.webp",
+        "price": 17
+      },
       "detailImages": [
         "img/montres/07-d01.jpg",
         "img/montres/07-d02.jpg",
@@ -2022,7 +1705,7 @@
       "boxSpec": "Carton 24 pces",
       "currency": "USD",
       "price": 11,
-      "image": "img/lunettes/03-main.jpg",
+      "image": "img/lunettes/03-main.webp",
       "specs": [
         [
           "Monture",
@@ -2037,32 +1720,12 @@
           "Oui"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/lunettes/03-main.jpg",
-          "price": 11
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/lunettes/03-t2.jpg",
-          "price": 21
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/lunettes/03-t3.jpg",
-          "price": 21
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/lunettes/03-t4.jpg",
-          "price": 21
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/lunettes/03-main.webp",
+        "price": 11
+      },
       "detailImages": [
         "img/lunettes/03-d01.jpg",
         "img/lunettes/03-d02.jpg",
@@ -2081,7 +1744,7 @@
       "boxSpec": "Carton 24 pces",
       "currency": "USD",
       "price": 14,
-      "image": "img/lunettes/04-main.jpg",
+      "image": "img/lunettes/04-main.webp",
       "specs": [
         [
           "Monture",
@@ -2096,32 +1759,12 @@
           "Oui"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/lunettes/04-main.jpg",
-          "price": 14
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/lunettes/04-t2.jpg",
-          "price": 26
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/lunettes/04-t3.jpg",
-          "price": 26
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/lunettes/04-t4.jpg",
-          "price": 26
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/lunettes/04-main.webp",
+        "price": 14
+      },
       "detailImages": [
         "img/lunettes/04-d01.jpg",
         "img/lunettes/04-d02.jpg",
@@ -2142,7 +1785,7 @@
       "boxSpec": "Carton 24 pces",
       "currency": "USD",
       "price": 14,
-      "image": "img/lunettes/05-main.jpg",
+      "image": "img/lunettes/05-main.webp",
       "specs": [
         [
           "Monture",
@@ -2157,32 +1800,12 @@
           "Oui"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/lunettes/05-main.jpg",
-          "price": 14
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/lunettes/05-t2.jpg",
-          "price": 21
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/lunettes/05-t3.jpg",
-          "price": 21
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/lunettes/05-t4.jpg",
-          "price": 21
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/lunettes/05-main.webp",
+        "price": 14
+      },
       "detailImages": [
         "img/lunettes/05-d01.jpg",
         "img/lunettes/05-d02.jpg",
@@ -2205,7 +1828,7 @@
       "boxSpec": "Carton 24 pces",
       "currency": "USD",
       "price": 21,
-      "image": "img/lunettes/06-main.jpg",
+      "image": "img/lunettes/06-main.webp",
       "specs": [
         [
           "Monture",
@@ -2220,50 +1843,12 @@
           "Oui"
         ]
       ],
-      "variants": [
-        {
-          "type": "color",
-          "label": "Single",
-          "img": "img/lunettes/06-main.jpg",
-          "price": 21
-        },
-        {
-          "type": "color",
-          "label": "Set 1",
-          "img": "img/lunettes/06-t2.jpg",
-          "price": 36
-        },
-        {
-          "type": "color",
-          "label": "Set 2",
-          "img": "img/lunettes/06-t3.jpg",
-          "price": 36
-        },
-        {
-          "type": "color",
-          "label": "Set 3",
-          "img": "img/lunettes/06-t4.jpg",
-          "price": 36
-        },
-        {
-          "type": "color",
-          "label": "Set 4",
-          "img": "img/lunettes/06-t5.jpg",
-          "price": 36
-        },
-        {
-          "type": "color",
-          "label": "Set 5",
-          "img": "img/lunettes/06-t6.jpg",
-          "price": 36
-        },
-        {
-          "type": "color",
-          "label": "Set 6",
-          "img": "img/lunettes/06-t7.jpg",
-          "price": 36
-        }
-      ],
+      "variants": {
+        "type": "color",
+        "label": "Single",
+        "img": "img/lunettes/06-main.webp",
+        "price": 21
+      },
       "detailImages": [
         "img/lunettes/06-d01.jpg",
         "img/lunettes/06-d02.jpg",
