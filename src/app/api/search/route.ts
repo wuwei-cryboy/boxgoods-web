@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
   const { q, cat, page, limit, sort, lang } = parsed.data;
 
   // 使用通用分页查询
-  const { data: products, pagination } = getProductsPaginated({
+  const { data: products, pagination } = await getProductsPaginated({
     query: q,
     category: cat,
     sortBy: sort,
