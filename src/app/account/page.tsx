@@ -5,6 +5,7 @@ import { useLang } from "@/lib/lang-context";
 import { useEffect, useState } from "react";
 import { norm } from "@/lib/utils";
 import { useUserRealtimeSubscription } from "@/hooks/useRealtimeSubscription";
+import { getProductsSync } from "@/lib/catalog.client";
 
 export default function AccountView() {
   const { lang, tr } = useLang();
@@ -44,7 +45,7 @@ export default function AccountView() {
     }
   );
 
-  const favProds = getProducts().filter((p) => favIds.includes(p.id));
+  const favProds = getProductsSync().filter((p) => favIds.includes(p.id));
 
   return (
     <main className="max-w-[680px] mx-auto px-4 pt-3.5 pb-20">
