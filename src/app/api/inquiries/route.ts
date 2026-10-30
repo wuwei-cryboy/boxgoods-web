@@ -160,12 +160,16 @@ export async function GET(req: NextRequest) {
         count: "exact",
       })
       .eq("user_id", user.id)
-      .order("created_at", { ascending: false })
-      .range(offset, offset + limit - 1);
+      .order("created_at", { ascending: false });
 
-    if (status) query = query.eq("status", status);
+    if (status) {
+      query = query.eq("status", status);
+    }
 
-    return query;
+    query = query.range(offset, offset + limit - 1);
+
+    const { data, error, count } = await query;
+    return { data, error, count };
   });
 
   if (authError) {
@@ -176,7 +180,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { data, error, count } = await authData;
+  const { data, error, count } = authData;
 
   if (error) {
     return NextResponse.json({ error: "查询失败" }, { status: 500 });
