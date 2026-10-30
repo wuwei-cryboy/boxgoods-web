@@ -9,8 +9,10 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
   const lang = await getLocale();
-  const cat = getCategories().find((c) => c.id === id);
-  const productCount = getProductsByCat(id).length;
+  const categories = await getCategories();
+  const cat = categories.find((c) => c.id === id);
+  const products = await getProductsByCat(id);
+  const productCount = products.length;
 
   if (!cat) {
     return { title: "Catégorie introuvable", robots: { index: false, follow: false } };
@@ -59,7 +61,9 @@ export async function generateStaticParams() {
 export default async function CatPage({ params }: PageProps) {
   const { id } = await params;
   const lang = await getLocale();
-  const cat = getCategories().find((c) => c.id === id);
+  const categories = await getCategories();
+  const cat = categories.find((c) => c.id === id);
+  const products = await getProductsByCat(id);
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://boxgoods-guinee.com";
   const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : id;
 
