@@ -5,22 +5,77 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "e2e:ui": "playwright test --ui",
+    "e2e:visual": "playwright test e2e/visual-regression.spec.ts",
+    "e2e:visual:update": "playwright test e2e/visual-regression.spec.ts --update-snapshots",
+    "storybook": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "lhci": "lhci autorun",
+    "lhci:desktop": "lhci autorun --config=lighthouserc.json",
+    "lhci:mobile": "lhci autorun --config=lighthouserc.mobile.json",
+    "bundle:analyze": "ANALYZE=true npm run build",
+    "perf:budget": "node scripts/check-perf-budget.js",
+    "test:all": "npm run test && npm run e2e"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.1155.0",
+    "@aws-sdk/s3-request-presigner": "^3.1155.0",
+    "@sentry/nextjs": "^11.9.0",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.118.0",
     "clsx": "2.1.1",
-    "gsap": "^3.15.0",
     "next": "15.5.28",
+    "next-pwa": "^5.6.0",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "xlsx": "^0.18.5",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.14.0",
+    "@next/bundle-analyzer": "^15.5.28",
     "@tailwindcss/postcss": "^4.1.0",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "@vitest/ui": "^5.0.5",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "15.5.28",
+    "eslint-config-prettier": "^10.0.1",
+    "husky": "^9.1.7",
+    "jsdom": "^30.1.3",
+    "lighthouse": "^12.0.0",
+    "lint-staged": "^15.2.11",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.5.0",
+    "prettier": "^3.4.2",
     "tailwindcss": "^4.1.0",
-    "typescript": "^5.8.0"
+    "tsx": "^4.23.15",
+    "typescript": "^5.8.0",
+    "typescript-eslint": "8.15.0",
+    "vitest": "^5.0.5",
+    "web-vitals": "^4.2.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }

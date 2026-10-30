@@ -1,0 +1,63 @@
+{
+  "budget": {
+    "total": {
+      "js": "200KB",
+      "css": "50KB",
+      "images": "150KB",
+      "fonts": "50KB",
+      "other": "20KB",
+      "total": "470KB"
+    },
+    "perRoute": {
+      "/": {
+        "js": "120KB",
+        "css": "30KB",
+        "images": "80KB",
+        "total": "230KB"
+      },
+      "/categories": {
+        "js": "100KB",
+        "css": "25KB",
+        "images": "60KB",
+        "total": "185KB"
+      },
+      "/search": {
+        "js": "90KB",
+        "css": "20KB",
+        "images": "30KB",
+        "total": "140KB"
+      },
+      "/inquiry": {
+        "js": "80KB",
+        "css": "20KB",
+        "images": "20KB",
+        "total": "120KB"
+      },
+      "/account": {
+        "js": "90KB",
+        "css": "20KB",
+        "images": "30KB",
+        "total": "140KB"
+      },
+      "/product/[id]": {
+        "js": "110KB",
+        "css": "25KB",
+        "images": "100KB",
+        "total": "235KB"
+      }
+    },
+    "mobile": {
+      "total": "350KB",
+      "js": "150KB",
+      "css": "35KB",
+      "images": "120KB"
+    },
+    "lighthouse": {
+      "performance": 90,
+      "accessibility": 95,
+      "bestPractices": 90,
+      "seo": 90,
+      "pwa": 80
+    }
+  }
+}

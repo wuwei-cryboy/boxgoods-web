@@ -1,0 +1,45 @@
+{
+  "name": "BoxGoods Guinee — Grossiste B2B",
+  "short_name": "BoxGoods",
+  "description": "Parfums, montres, téléphones, accessoires, lunettes — fournisseurs vérifiés, stock local en Guinée.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0F5132",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "shopping"],
+  "shortcuts": [
+    {
+      "name": "Catalogue",
+      "short_name": "Catalogue",
+      "description": "Voir toutes les catégories",
+      "url": "/categories",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Nouvelle demande",
+      "short_name": "Demande",
+      "description": "Soumettre une demande de devis",
+      "url": "/inquiry",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": []
+}

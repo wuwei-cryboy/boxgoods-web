@@ -14,3 +14,7 @@ build-map.js
 map-plan.json
 fix68.js
 
+# DSH 本地记忆与团队状态（仅本机，不入库）
+.dsh-memory/
+.agent-teams/
+
