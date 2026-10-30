@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const inquiryId = data?.id;
+    const inquiryId = data?.data?.id;
     
     // 异步发送通知（不阻塞响应）
     if (inquiryId) {
