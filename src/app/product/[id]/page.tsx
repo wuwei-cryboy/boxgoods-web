@@ -10,14 +10,15 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params;
   const lang = await getLocale();
-  const prod = getProduct(id);
+  const prod = await getProduct(id);
 
   if (!prod) {
     return { title: "Produit introuvable", robots: { index: false, follow: false } };
   }
 
-  const cat = getCategories().find((c) => c.id === prod.cat);
-  const sup = getSupplier(prod.supplierId);
+  const categories = await getCategories();
+  const cat = categories.find((c) => c.id === prod.cat);
+  const sup = await getSupplier(prod.supplierId);
   const name = lang === "zh" ? prod.nameZh : prod.nameFr;
   const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : prod.cat;
   const moqLabel = await getTranslation("moq");
@@ -75,9 +76,10 @@ export async function generateStaticParams() {
 export default async function Product({ params }: PageProps) {
   const { id } = await params;
   const lang = await getLocale();
-  const prod = getProduct(id);
-  const cat = getCategories().find((c) => c.id === prod?.cat);
-  const sup = getSupplier(prod?.supplierId);
+  const prod = await getProduct(id);
+  const categories = await getCategories();
+  const cat = categories.find((c) => c.id === prod?.cat);
+  const sup = await getSupplier(prod?.supplierId);
   const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : prod?.cat;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://boxgoods-guinee.com";
 
