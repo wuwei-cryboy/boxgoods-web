@@ -145,14 +145,14 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const status = searchParams.get("status");
+  const limit = Math.min(Number(searchParams.get("limit") ?? 20), 100);
+  const offset = Number(searchParams.get("offset") ?? 0);
+
   const { data: authData, error: authError } = await withSupabase(async (supabase) => {
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) return { user: null };
-
-    const { searchParams } = new URL(req.url);
-    const status = searchParams.get("status");
-    const limit = Math.min(Number(searchParams.get("limit") ?? 20), 100);
-    const offset = Number(searchParams.get("offset") ?? 0);
 
     let query = supabase
       .from("inquiries")
