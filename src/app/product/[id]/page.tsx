@@ -79,7 +79,7 @@ export default async function Product({ params }: PageProps) {
   const prod = await getProduct(id);
   const categories = await getCategories();
   const cat = categories.find((c) => c.id === prod?.cat);
-  const supplier = prod?.supplierId ? await getSupplier(prod.supplierId) : undefined;
+  const sup = prod?.supplierId ? await getSupplier(prod.supplierId) : undefined;
   const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : prod?.cat;
   const supplierName = sup?.name ?? "BoxGoods";
 
