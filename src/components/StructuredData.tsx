@@ -9,6 +9,12 @@ interface ProductJsonLdProps {
   supplierName?: string;
 }
 
+interface ProductJsonLdProps {
+  product: Product;
+  categoryName: string;
+  supplierName?: string;
+}
+
 export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods" }: ProductJsonLdProps) {
   const { lang } = useLang();
   const name = lang === "zh" ? product.nameZh : product.nameFr;
