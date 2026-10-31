@@ -6,7 +6,7 @@ import { norm } from "@/lib/utils";
 interface ProductJsonLdProps {
   product: Product;
   categoryName: string;
-  supplierName: string;
+  supplierName?: string;
 }
 
 export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods" }: ProductJsonLdProps) {
@@ -17,7 +17,7 @@ export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods"
   const currency = product.currency || "USD";
   const image = product.image ? norm(product.image) : undefined;
 
-  const supplierNameValue: string = "BoxGoods";
+  const supplierNameValue: string = supplierName ?? "BoxGoods";
 
   const jsonLd = {
     "@context": "https://schema.org/",
