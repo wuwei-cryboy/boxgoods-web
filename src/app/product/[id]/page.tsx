@@ -81,13 +81,13 @@ export default async function Product({ params }: PageProps) {
   const cat = categories.find((c) => c.id === prod?.cat);
   const sup = prod?.supplierId ? await getSupplier(prod.supplierId) : undefined;
   const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : prod?.cat;
-  const supplierNameValue = sup?.name ?? "BoxGoods";
+  const supplierName = sup?.name ?? "BoxGoods";
 
   return (
     <>
       {prod && (
         <>
-          <ProductJsonLd product={prod} categoryName={catName} supplierName={(sup?.name ?? "BoxGoods") as string} />
+          <ProductJsonLd product={prod} categoryName={catName} supplierName={supplierName} />
           <BreadcrumbJsonLd
             items={[
               { name: lang === "zh" ? "首页" : "Accueil", url: siteUrl },
