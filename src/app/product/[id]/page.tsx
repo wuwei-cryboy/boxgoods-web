@@ -68,6 +68,8 @@ import MobileTabBar from "@/components/MobileTabBar";
 import ProductView from "@/components/ProductView";
 import { ProductJsonLd, BreadcrumbJsonLd, WebSiteJsonLd } from "@/components/StructuredData";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://boxgoods-guinee.com";
+
 export async function generateStaticParams() {
   const products = await getProducts();
   return products.map((p) => ({ id: p.id }));
@@ -80,8 +82,8 @@ export default async function Product({ params }: PageProps) {
   const categories = await getCategories();
   const cat = categories.find((c) => c.id === prod?.cat);
   const sup = prod?.supplierId ? await getSupplier(prod.supplierId) : undefined;
-  const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : prod?.cat;
-  const supplierName = (sup?.name ?? "BoxGoods") as string;
+  const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : (prod?.cat ?? "unknown");
+  const supplierName = sup?.name ?? "BoxGoods";
 
   return (
     <>

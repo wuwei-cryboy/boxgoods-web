@@ -247,7 +247,7 @@ export async function notifyInquiryCreated(params: {
   await Promise.allSettled([
     // 管理员通知（多渠道）
     sendNotification({
-      channels: ["email", "webhook", "feishu"].filter(ch => {
+      channels: (["email", "webhook", "feishu"] as NotificationChannel[]).filter(ch => {
         if (ch === "webhook") return !!process.env.NOTIFICATION_WEBHOOK_URL;
         if (ch === "feishu") return !!process.env.FEISHU_WEBHOOK_URL;
         return true;

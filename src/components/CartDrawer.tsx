@@ -11,7 +11,7 @@ export default function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClo
   const { lang, tr } = useLang();
   const [items, setItems] = useState<CartItem[]>([]);
   const [subtotal, setSubtotal] = useState(0);
-  const drawerRef = useRef<HTMLAsideElement>(null);
+  const drawerRef = useRef<HTMLDivElement>(null);
   const previousActiveElement = useRef<HTMLElement | null>(null);
 
   // 焦点陷阱所需的可聚焦元素选择器
@@ -206,7 +206,7 @@ export default function CartDrawer({ isOpen, onClose }: { isOpen: boolean; onClo
           </div>
           <div className="flex gap-2 pt-2 border-t border-[var(--color-line)]">
             <button
-              onClick={exportCartToXLSX}
+              onClick={() => { exportCartToXLSX(); }}
               className="flex-1 border border-[var(--color-brand)] text-[var(--color-brand)] rounded-full py-2.5 text-sm font-semibold"
             >
               {tr("exportXLSX") || "导出 Excel"}

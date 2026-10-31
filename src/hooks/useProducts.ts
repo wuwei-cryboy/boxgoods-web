@@ -12,10 +12,30 @@ import {
   getProductSync, 
   getProductsFilteredSync,
   getProductsPaginatedSync,
+  getCategoriesSync,
+  getSupplierSync,
   type Product,
   type ProductQueryOptions,
   type PaginatedResult,
+  type Category,
+  type Supplier,
 } from "@/lib/catalog.client";
+
+/** 按 id 获取单个分类（兼容旧 hook 导出名 useCategory） */
+export function useCategory(categoryId: string | null | undefined): Category | undefined {
+  return useMemo(() => {
+    if (!categoryId) return undefined;
+    return getCategoriesSync().find((c) => c.id === categoryId);
+  }, [categoryId]);
+}
+
+/** 按 id 获取单个供应商（兼容旧 hook 导出名 useSupplier） */
+export function useSupplier(supplierId: string | null | undefined): Supplier | undefined {
+  return useMemo(() => {
+    if (!supplierId) return undefined;
+    return getSupplierSync(supplierId);
+  }, [supplierId]);
+}
 
 /** 获取所有产品（同步，适合 Client Component 直接使用） */
 export function useProducts(): Product[] {
@@ -40,7 +60,7 @@ export function useProduct(productId: string | null | undefined): Product | unde
 
 /** 通用分页查询 Hook（可替换为 SWR/React Query） */
 export function useProductsPaginated(options: ProductQueryOptions = {}): PaginatedResult<Product> {
-  return useMemo(() => getProductsPaginated(options), [
+  return useMemo(() => getProductsPaginatedSync(options), [
     options.query,
     options.category,
     options.sortBy,

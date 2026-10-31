@@ -89,7 +89,7 @@ function mapSupplierRow(row: Record<string, unknown>): Supplier {
   return {
     id: row.id as string,
     name: row.name as string,
-    address: row.address as string | undefined,
+    address: (row.address as string) ?? "",
     phone: row.phone as string | undefined,
     wa: row.whatsapp as string | undefined,
     icon: row.icon_svg as string | undefined,
@@ -104,7 +104,7 @@ async function cachedQuery<T>(key: string, fetcher: () => Promise<T>): Promise<T
   const now = Date.now();
   const hit = cache.get(key);
   if (hit && hit.expires > now) {
-    return hit.data;
+    return hit.data as T;
   }
   const data = await fetcher();
   cache.set(key, { data, expires: now + CACHE_TTL });

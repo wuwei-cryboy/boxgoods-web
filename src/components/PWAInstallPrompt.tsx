@@ -22,13 +22,13 @@ export default function PWAInstallPrompt() {
       return () => clearTimeout(timer);
     };
 
-    window.addEventListener("beforeinstallprompt", handler as EventListener);
+    window.addEventListener("beforeinstallprompt", handler as unknown as EventListener);
 
     // 检查是否已安装
     const isInstalled = "standalone" in window.navigator || window.matchMedia("(display-mode: standalone)").matches;
     if (isInstalled) setDismissed(true);
 
-    return () => window.removeEventListener("beforeinstallprompt", handler as EventListener);
+    return () => window.removeEventListener("beforeinstallprompt", handler as unknown as EventListener);
   }, [dismissed]);
 
   const handleInstall = async () => {

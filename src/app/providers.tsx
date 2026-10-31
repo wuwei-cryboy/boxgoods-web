@@ -3,7 +3,7 @@
 
 // Polyfill for crypto.randomUUID (client-side)
 if (typeof window !== "undefined" && typeof crypto.randomUUID !== "function") {
-  crypto.randomUUID = () => {
+  (crypto as any).randomUUID = () => {
     return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
       const r = (Math.random() * 16) | 0;
       const v = c === "x" ? r : (r & 0x3) | 0x8;

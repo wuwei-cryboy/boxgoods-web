@@ -43,16 +43,22 @@ function useRealtimeSubscriptionWithReconnect<T>(
     const supabase = createSupabaseBrowserClient();
     supabaseRef.current = supabase;
 
+    // 通过 any 绕过 supabase-js v2 的 channel().on() 重载签名与 postgres_changes
+    // 过滤器联合类型的冲突；payload 的字段（new/old/eventType）运行时稳定。
     const channel = supabase
       .channel(channelName)
       .on(
-        "postgres_changes",
-        postgresChangesFilter,
-        (payload) => {
-          callbackRef.current(payload as Callback<T> extends (p: infer P) => void ? P : never);
+        "postgres_changes" as any,
+        postgresChangesFilter as any,
+        (payload: any) => {
+          callbackRef.current({
+            new: payload.new as T,
+            old: (payload.old as T | null) ?? null,
+            eventType: (payload.eventType ?? "INSERT") as "INSERT" | "UPDATE" | "DELETE",
+          });
         }
       )
-      .subscribe((status, _err) => {
+      .subscribe((status: any, _err: any) => {
         if (!isMountedRef.current) return;
 
         if (status === "SUBSCRIBED") {

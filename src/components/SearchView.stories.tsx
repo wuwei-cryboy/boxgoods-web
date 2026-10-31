@@ -42,13 +42,6 @@ export const WithResults: Story = {
   parameters: {
     globals: { locale: "fr", theme: "light" },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ padding: "20px" }}>
-        <Story />
-      </div>
-    ),
-  },
   // 通过 URL 参数模拟搜索结果
   // 实际运行时会请求 /api/search?q=iphone
 };

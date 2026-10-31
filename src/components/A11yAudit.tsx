@@ -6,16 +6,17 @@ export default function A11yAudit() {
     if (process.env.NODE_ENV !== "development") return;
 
     // 动态导入 axe-core，避免生产环境打包
-    import("axe-core").then((module) => {
+    // 由于 axe-core 类型定义有限，这里用 any 处理结果
+    import("axe-core").then((module: any) => {
       const axe = module.default || module;
       // 10秒后开始审计，给页面留出渲染时间
       const timer = setTimeout(() => {
-        axe.run(document, {}, (results) => {
+        axe.run(document, {}, (results: any) => {
           if (results.violations.length > 0) {
             console.group("♿ Accessibility Violations");
-            results.violations.forEach((violation) => {
+            results.violations.forEach((violation: any) => {
               console.warn(`[${violation.impact}] ${violation.id}: ${violation.description}`);
-              console.log("Nodes:", violation.nodes.map(n => n.target).join(", "));
+              console.log("Nodes:", violation.nodes.map((n: any) => n.target).join(", "));
               console.log("Help:", violation.helpUrl);
             });
             console.groupEnd();

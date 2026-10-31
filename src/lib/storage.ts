@@ -142,7 +142,7 @@ export async function verifyUploadedFile(options: VerifyUploadOptions): Promise<
       const body = getResponse.Body;
       if (body) {
         const chunks: Uint8Array[] = [];
-        for await (const chunk of body as AsyncGenerator<Uint8Array>) {
+        for await (const chunk of body as unknown as AsyncIterable<Uint8Array>) {
           chunks.push(chunk);
         }
         const header = Buffer.concat(chunks);
