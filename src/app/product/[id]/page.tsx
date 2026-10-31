@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: name,
       description: `${name} — ${catName} · ${moqLabel} ${prod.moq} · ${priceRange}`,
-      type: "product",
+      type: "website",
       locale: lang === "zh" ? "zh_CN" : "fr_FR",
       images: prod.image ? [{ url: norm(prod.image), width: 800, height: 800, alt: name }] : ["/img/og-default.webp"],
     },
@@ -79,7 +79,7 @@ export default async function Product({ params }: PageProps) {
   const prod = await getProduct(id);
   const categories = await getCategories();
   const cat = categories.find((c) => c.id === prod?.cat);
-  const sup = await getSupplier(prod?.supplierId);
+  const sup = prod?.supplierId ? await getSupplier(prod.supplierId) : undefined;
   const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : prod?.cat;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://boxgoods-guinee.com";
 
