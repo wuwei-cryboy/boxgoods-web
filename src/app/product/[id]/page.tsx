@@ -81,7 +81,7 @@ export default async function Product({ params }: PageProps) {
   const cat = categories.find((c) => c.id === prod?.cat);
   const supplier = prod?.supplierId ? await getSupplier(prod.supplierId) : undefined;
   const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : prod?.cat;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://boxgoods-guinee.com";
+  const supplierName = sup?.name ?? "BoxGoods";
 
   return (
     <>
