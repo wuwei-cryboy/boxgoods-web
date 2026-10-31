@@ -6,10 +6,10 @@ import { norm } from "@/lib/utils";
 interface ProductJsonLdProps {
   product: Product;
   categoryName: string;
-  supplierName: string;
+  supplierName?: string;
 }
 
-export function ProductJsonLd({ product, categoryName, supplierName }: ProductJsonLdProps) {
+export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods" }: ProductJsonLdProps) {
   const { lang } = useLang();
   const name = lang === "zh" ? product.nameZh : product.nameFr;
   const description = `${categoryName} · MOQ ${product.moq} · ${product.boxSpec}`;
