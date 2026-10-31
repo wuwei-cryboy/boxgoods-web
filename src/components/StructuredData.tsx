@@ -9,7 +9,7 @@ interface ProductJsonLdProps {
   supplierName?: string;
 }
 
-export function ProductJsonLd({ product, categoryName, supplierName }: ProductJsonLdProps) {
+export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods" }: ProductJsonLdProps) {
   const { lang } = useLang();
   const name = lang === "zh" ? product.nameZh : product.nameFr;
   const description = `${categoryName} · MOQ ${product.moq} · ${product.boxSpec}`;
@@ -22,7 +22,7 @@ export function ProductJsonLd({ product, categoryName, supplierName }: ProductJs
     "@type": "Product",
     name,
     description,
-    brand: { "@type": "Brand", name: supplierName || "BoxGoods" },
+    brand: { "@type": "Brand", name: supplierName },
     category: categoryName,
     sku: product.id,
     offers: {
