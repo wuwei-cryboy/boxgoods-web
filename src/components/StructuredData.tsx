@@ -6,7 +6,7 @@ import { norm } from "@/lib/utils";
 interface ProductJsonLdProps {
   product: Product;
   categoryName: string;
-  supplierName?: string;
+  supplierName: string;
 }
 
 export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods" }: ProductJsonLdProps) {
@@ -17,14 +17,14 @@ export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods"
   const currency = product.currency || "USD";
   const image = product.image ? norm(product.image) : undefined;
 
-  const supplierNameValue = supplierName ?? "BoxGoods";
+  const supplierNameValue: string = "BoxGoods";
 
   const jsonLd = {
     "@context": "https://schema.org/",
     "@type": "Product",
     name,
     description,
-    brand: { "@type": "Brand", name: supplierName },
+    brand: { "@type": "Brand", name: supplierNameValue },
     category: categoryName,
     sku: product.id,
     offers: {
