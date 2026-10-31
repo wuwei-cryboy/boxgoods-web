@@ -79,7 +79,7 @@ export default async function Product({ params }: PageProps) {
   const prod = await getProduct(id);
   const categories = await getCategories();
   const cat = categories.find((c) => c.id === prod?.cat);
-  const sup = prod?.supplierId ? await getSupplier(prod.supplierId) : undefined;
+  const supplier = prod?.supplierId ? await getSupplier(prod.supplierId) : undefined;
   const catName = cat ? (lang === "zh" ? cat.zh : cat.fr) : prod?.cat;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://boxgoods-guinee.com";
 
@@ -87,7 +87,7 @@ export default async function Product({ params }: PageProps) {
     <>
       {prod && (
         <>
-          <ProductJsonLd product={prod} categoryName={catName} supplierName={sup?.name ? sup.name : "BoxGoods"} />
+          <ProductJsonLd product={prod} categoryName={catName} supplierName={sup?.name ?? "BoxGoods"} />
           <BreadcrumbJsonLd
             items={[
               { name: lang === "zh" ? "首页" : "Accueil", url: siteUrl },
