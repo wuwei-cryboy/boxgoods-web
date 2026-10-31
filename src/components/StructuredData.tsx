@@ -6,7 +6,7 @@ import { norm } from "@/lib/utils";
 interface ProductJsonLdProps {
   product: Product;
   categoryName: string;
-  supplierName?: string;
+  supplierName: string;
 }
 
 export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods" }: ProductJsonLdProps) {
