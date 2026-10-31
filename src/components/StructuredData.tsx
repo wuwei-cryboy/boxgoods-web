@@ -9,13 +9,15 @@ interface ProductJsonLdProps {
   supplierName?: string;
 }
 
-export function ProductJsonLd({ product, categoryName, supplierName = "BoxGoods" }: ProductJsonLdProps) {
+export function ProductJsonLd({ product, categoryName, supplierName }: ProductJsonLdProps) {
   const { lang } = useLang();
   const name = lang === "zh" ? product.nameZh : product.nameFr;
   const description = `${categoryName} · MOQ ${product.moq} · ${product.boxSpec}`;
   const price = product.priceMin ?? 0;
   const currency = product.currency || "USD";
   const image = product.image ? norm(product.image) : undefined;
+
+  const supplierNameValue = supplierName ?? "BoxGoods";
 
   const jsonLd = {
     "@context": "https://schema.org/",
