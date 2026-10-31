@@ -87,7 +87,7 @@ export default async function Product({ params }: PageProps) {
     <>
       {prod && (
         <>
-          <ProductJsonLd product={prod} categoryName={catName} supplierName={(sup?.name ?? "BoxGoods") as string} />
+          <ProductJsonLd product={prod} categoryName={catName} supplierName={sup?.name ? sup.name : "BoxGoods"} />
           <BreadcrumbJsonLd
             items={[
               { name: lang === "zh" ? "首页" : "Accueil", url: siteUrl },
