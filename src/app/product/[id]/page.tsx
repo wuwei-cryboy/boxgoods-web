@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-import { getProducts } from "@/lib/catalog";
+import { getProductsSync } from "@/lib/catalog.client";
 import Header from "@/components/Header";
 import MobileTabBar from "@/components/MobileTabBar";
 import ProductView from "@/components/ProductView";
@@ -71,7 +71,7 @@ import { ProductJsonLd, BreadcrumbJsonLd, WebSiteJsonLd } from "@/components/Str
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://boxgoods-guinee.com";
 
 export async function generateStaticParams() {
-  const products = await getProducts();
+  const products = getProductsSync();
   return products.map((p) => ({ id: p.id }));
 }
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getCategories, getProductsByCat } from "@/lib/catalog";
+import { getCategoriesSync } from "@/lib/catalog.client";
 import { getTranslation, getLocale } from "@/lib/lang";
 
 interface PageProps {
@@ -54,7 +55,7 @@ import CatView from "@/components/CatView";
 import { BreadcrumbJsonLd, WebSiteJsonLd } from "@/components/StructuredData";
 
 export async function generateStaticParams() {
-  const categories = await getCategories();
+  const categories = getCategoriesSync();
   return categories.map((c) => ({ id: c.id }));
 }
 

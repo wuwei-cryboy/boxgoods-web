@@ -1,8 +1,8 @@
 // src/app/sitemap.ts
 import { MetadataRoute } from "next";
-import { getProducts, getCategories } from "@/lib/catalog";
+import { getCategoriesSync, getProductsSync } from "@/lib/catalog.client";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://boxgoods-guinee.com";
   const currentDate = new Date();
 
@@ -34,7 +34,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  const [categories, products] = await Promise.all([getCategories(), getProducts()]);
+  const categories = getCategoriesSync();
+  const products = getProductsSync();
 
   // 品类页面
   const categoryRoutes: MetadataRoute.Sitemap = categories.map((cat) => ({
